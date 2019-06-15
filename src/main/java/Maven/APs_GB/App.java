@@ -1,4 +1,4 @@
-package Maven.ProjetoMaves_Ex120;
+package Maven.APs_GB;
 
 /**
  * Hello world!

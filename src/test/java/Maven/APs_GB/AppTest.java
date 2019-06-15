@@ -1,5 +1,6 @@
-package Maven.ProjetoMaves_Ex120;
+package Maven.APs_GB;
 
+import Maven.APs_GB.App;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
