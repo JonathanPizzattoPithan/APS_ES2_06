@@ -11,6 +11,8 @@ public class Principal {
 		P1.setCPF(12345678912L);
 		P1.setTelefone(33111111);
 		P1.setEndereco("Rua patatipatatá 22");
+		P1.setID(01);
+		
 		
 		//System.out.println(P1.getNome() + "\n" + P1.getCPF() + "\n" + P1.getEndereco() + "\n" + P1.getTelefone()+ "\n");
 		System.out.println(P1.toString());
@@ -19,6 +21,7 @@ public class Principal {
 		P2.setCPF(43215678912L);
 		P2.setTelefone(33117777);
 		P2.setEndereco("Rua patatipatatá 37");
+		P2.setID(02);
 		
 		//System.out.println(P2.getNome() + "\n" + P2.getCPF() + "\n" + P2.getEndereco() + "\n" + P2.getTelefone()+ "\n");
 		System.out.println(P2.toString());
@@ -45,7 +48,12 @@ public class Principal {
 		System.out.println(N3.toString());
 		
 		ListaDeCompras L1 = new ListaDeCompras();
-		L1.setCliente(P1.getNome());
+		L1.register(P1);
+		
+		ListaDeCompras L2 = new ListaDeCompras();
+		L2.register(P2);
+		
+		L1.setID(P1.getID());
 		L1.ListaC.add(N2);
 		L1.ListaC.add(N3);
 		
@@ -81,8 +89,25 @@ public class Principal {
 		
 		L1.ListaC.remove(N2);
 		
+		L1.Adiciona(N1);
+		
 		L1.MostraTodos();
 		System.out.println(L1.getValorTotal()+ "\n");
+		
+		System.out.println("/////////////////////////\n");
+		
+		L2.Adiciona(N3);
+		L2.Adiciona(N1);
+		L2.Adiciona(N1);
+		L2.MostraTodos();
+		System.out.println(L2.getValorTotal()+ "\n");
+		
+		System.out.println("/////////////////////////\n");
+		
+		L2.Remove(N3);
+		L2.MostraTodos();
+		System.out.println(L2.getValorTotal()+ "\n");
+		
 	}
 
 }
